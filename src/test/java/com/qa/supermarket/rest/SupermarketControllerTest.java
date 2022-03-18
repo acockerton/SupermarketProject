@@ -39,7 +39,7 @@ void testCreate() throws Exception {
 	
 	RequestBuilder mockRequest = post("/create").contentType(MediaType.APPLICATION_JSON).content(createJSON);
 	
-	Supermarket saved = new Supermarket(2L, "Peas",500,"Frozen");
+	Supermarket saved = new Supermarket(1L, "Peas",500,"Frozen");
 	
 	String savedJSON =this.map.writeValueAsString(saved);
 	

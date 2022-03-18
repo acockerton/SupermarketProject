@@ -33,7 +33,7 @@ If I went back over this project in the future I would add more tests and go loo
 <img width="1053" alt="ReadAll" src="https://user-images.githubusercontent.com/97461139/159013656-0d563a57-768a-4915-b599-50e1884be925.png">
 
 ### Read by id
-<img width="1053" alt="ReadAll" src="https://user-images.githubusercontent.com/97461139/159013715-55405177-670b-4f46-8603-ecbe992c833c.png">
+<img width="1053" alt="ReadByID" src="https://user-images.githubusercontent.com/97461139/159016893-5ce6f8f4-c280-419d-badd-717465526f19.png">
 
 ### Remove by id
 <img width="1053" alt="RemoveByID" src="https://user-images.githubusercontent.com/97461139/159013784-67ece093-1d8b-49af-b4db-26818715b98a.png">

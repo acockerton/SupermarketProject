@@ -1,0 +1,1 @@
+INSERT INTO supermarket(`weight`,`item`,`category`) VALUES(500,'oranges','fruit');

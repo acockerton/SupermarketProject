@@ -49,7 +49,7 @@ If I went back over this project in the future I would add more tests and go loo
 ![Screenshot 2022-03-18 at 14 15 39](https://user-images.githubusercontent.com/97461139/159025340-62793850-ba6a-4c04-bb8b-d7669e6129fc.png)
 
 ## Link to Jira Board
-https://alexcockerton.atlassian.net/jira/software/projects/SS/boards/3
+https://alexcockerton.atlassian.net/jira/software/projects/SS/boards/3[Risk Assessment.pdf]
 
-[Risk Assessment.pdf](https://github.com/acockerton/SupermarketProject/files/8305563/Risk.Assessment.pdf)
+[Risk Assessment.pdf](https://github.com/acockerton/SupermarketProject/files/8305727/Risk.Assessment.pdf)
 

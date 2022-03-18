@@ -1,5 +1,6 @@
 package com.qa.supermarket.rest;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -49,6 +50,15 @@ void testCreate() throws Exception {
 
 	this.mock.perform(mockRequest).andExpect(matchStatus).andExpect(matchBody);
 	
+}
+
+@Test
+void testRemove() throws Exception {
+	Long id = 1L;
+	RequestBuilder mockRequest = delete("/remove/?id="+id);
+	ResultMatcher status = status().isOk();
+	ResultMatcher body = content().string("true");
+	this.mock.perform(mockRequest).andExpect(body).andExpect(status);
 }
 
 

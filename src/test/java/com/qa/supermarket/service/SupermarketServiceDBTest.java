@@ -93,10 +93,10 @@ public class SupermarketServiceDBTest {
 			Mockito.when(this.rep.findById(id)).thenReturn(opt);
 			Mockito.when(this.rep.save(updated)).thenReturn(updated);
 		
-//			assertThat(this.serv.update(id, toUpdate)).isEqualTo(updated);
+			assertThat(this.serv.update(id, toUpdate)).isEqualTo(updated);
 		
-//			Mockito.verify(this.rep, Mockito.times(1)).findById(id);
-//			Mockito.verify(this.rep, Mockito.times(1)).save(updated);
+			Mockito.verify(this.rep, Mockito.times(1)).findById(id);
+			Mockito.verify(this.rep, Mockito.times(1)).save(updated);
 		}
 
 		@Test

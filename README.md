@@ -45,5 +45,8 @@ If I went back over this project in the future I would add more tests and go loo
 <img width="786" alt="Coverage results" src="https://user-images.githubusercontent.com/97461139/159015441-19a56a8b-a8c1-44c3-9598-0799808860f4.png">
 <img width="1076" alt="JUnit Faliure Trace" src="https://user-images.githubusercontent.com/97461139/159015472-44fbab44-7547-49d3-8959-952f7a6b034f.png">
 
+### ERD
+![Screenshot 2022-03-18 at 14 15 39](https://user-images.githubusercontent.com/97461139/159025340-62793850-ba6a-4c04-bb8b-d7669e6129fc.png)
+
 ## Link to Jira Board
 https://alexcockerton.atlassian.net/jira/software/projects/SS/boards/3

@@ -67,23 +67,24 @@ public class Supermarket {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
+@Override
+public int hashCode() {
+	return Objects.hash(weight, item, category, id);
+}
 	
-	@Override
-	public int hashCode() {
-		return Objects.hash(weight, item, category, id);
-		}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Supermarket other = (Supermarket) obj;
+	return weight == other.weight && Objects.equals(item, other.item) && Objects.equals(category, other.category)
+			&& Objects.equals(id,  other.id);
 	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Supermarket other = (Supermarket) obj;
-		return weight == other.weight && Objects.equals(item, other.item) && Objects.equals(category, other.category)
-				&& Objects.equals(id, other.id);
-	}
+}
 	
 }

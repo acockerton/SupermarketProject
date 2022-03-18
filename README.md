@@ -22,7 +22,7 @@ If I went back over this project in the future I would add more tests and go loo
 * Include the use of DTOs
 * Include the use of Lombok
 
-## Screenshots showing psotman requests and the output from the API
+## Screenshots showing postman requests and the output from the API
 
 ### create
 
@@ -50,3 +50,6 @@ If I went back over this project in the future I would add more tests and go loo
 
 ## Link to Jira Board
 https://alexcockerton.atlassian.net/jira/software/projects/SS/boards/3
+
+[Risk Assessment.pdf](https://github.com/acockerton/SupermarketProject/files/8305563/Risk.Assessment.pdf)
+

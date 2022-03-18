@@ -22,7 +22,7 @@ import com.qa.supermarket.repo.SupermarketRepo;
 @ActiveProfiles("test")
 public class SupermarketServiceDBTest {
 
-		
+	
 		private Supermarket input;
 		private Supermarket returned;
 
@@ -46,7 +46,6 @@ public class SupermarketServiceDBTest {
 		
 			assertThat(this.serv.create(input)).isEqualTo(returned);
 
-			
 			Mockito.verify(this.rep, Mockito.times(1)).save(input);
 		}
 
@@ -55,9 +54,9 @@ public class SupermarketServiceDBTest {
 
 			List<Supermarket> readList = new ArrayList<>();
 			readList.add(input);
-			
+	
 			Mockito.when(this.rep.findAll()).thenReturn(readList);
-			
+		
 			assertThat(this.serv.read()).isEqualTo(readList);
 			
 			Mockito.verify(this.rep, Mockito.times(1)).findAll();
@@ -67,12 +66,13 @@ public class SupermarketServiceDBTest {
 		
 		@Test
 		void testReadOne() {
-			
+		
 			Long id = 1L;
+		
 			Optional<Supermarket> optSuper = Optional.of(returned);
 			
 			Mockito.when(this.rep.findById(id)).thenReturn(optSuper);
-			
+	
 			assertThat(this.serv.readOne(id)).isEqualTo(returned);
 			
 			Mockito.verify(this.rep, Mockito.times(1)).findById(id);
@@ -87,29 +87,29 @@ public class SupermarketServiceDBTest {
 			Supermarket toUpdate = new Supermarket("Porridge", 1000, "Breakfast");
 			
 			Optional<Supermarket> opt = Optional.of(returned);
-		
-			Supermarket updated = new Supermarket(id, toUpdate.getItem(), toUpdate.getWeight(), toUpdate.getCategory());
 			
+			Supermarket updated = new Supermarket(id, toUpdate.getItem(), toUpdate.getWeight(), toUpdate.getCategory());
+		
 			Mockito.when(this.rep.findById(id)).thenReturn(opt);
 			Mockito.when(this.rep.save(updated)).thenReturn(updated);
-			
+		
 			assertThat(this.serv.update(id, toUpdate)).isEqualTo(updated);
-			
+		
 			Mockito.verify(this.rep, Mockito.times(1)).findById(id);
 			Mockito.verify(this.rep, Mockito.times(1)).save(updated);
 		}
 
 		@Test
 		void testDelete() {
-			
+		
 			Long id = 1L;
 			
 			Optional<Supermarket> optChoco = Optional.of(returned);
-		
+			
 			Mockito.when(this.rep.findById(id)).thenReturn(optChoco);
 			
 			assertThat(this.serv.delete(id)).isEqualTo(returned);
-			
+		
 			Mockito.verify(this.rep, Mockito.times(1)).deleteById(id);
 			Mockito.verify(this.rep, Mockito.times(1)).findById(id);
 		}
@@ -118,11 +118,11 @@ public class SupermarketServiceDBTest {
 		void testRemove() {
 			
 			Long id = 1L;
-			
+		
 			Mockito.when(this.rep.existsById(id)).thenReturn(false);
-			
+		
 			assertThat(this.serv.remove(id)).isTrue();
-			
+		
 			Mockito.verify(this.rep, Mockito.times(1)).deleteById(id);
 			Mockito.verify(this.rep, Mockito.times(1)).existsById(id);
 		}
